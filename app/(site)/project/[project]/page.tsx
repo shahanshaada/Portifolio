@@ -14,7 +14,7 @@ export default async function Project({params}:Props){
         <a href={project.url} title="View Project" 
         target="_blank" rel="noopener noreferrer" className="bg-gray-100 rounded-lg text-gray-500 font-bold py-3 px-4 whitespace-nowrap hover:bg-pink-500 hover:text-pink-100 transition">View Project</a>
         </header>
-    <div className="text-lg text-gray-700 mt-5"><PortableText value={project.content}/></div>
+    <div className="text-lg text-gray-300 mt-5"><PortableText value={project.content}/></div>
     <Image
     src={project.image}
     alt={project.alt}

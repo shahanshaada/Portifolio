@@ -14,11 +14,7 @@ export async function getMainPageContent(): Promise<MainPage> {
         name,
         "image": image.asset->url,
         description ,
-          resume {
-          asset -> {
-            _ref
-          }
-        },
+        "resume": resume.asset->url ,
         skillDescription,
         "frontend": frontend[]{
             skillName,
@@ -38,7 +34,6 @@ export async function getMainPageContent(): Promise<MainPage> {
         } ,
          nationality,
          emailId,
-         mobile,
          gitLink,
          linkedIn
         }`
@@ -85,6 +80,7 @@ export async function getPages(): Promise<Page[]> {
         _id,
         _createdAt,
         title,
+        id,
         "slug":slug.current,
             }`
     )
@@ -97,6 +93,7 @@ export async function getPage(slug: string): Promise<Page> {
             _id,
             _createdAt,
             title,
+            id,
             "slug":slug.current,
             content    }`,
         { slug }

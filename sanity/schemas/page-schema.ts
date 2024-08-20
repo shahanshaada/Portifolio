@@ -18,6 +18,11 @@ const page={
             }
         },
         {
+            name:'id',
+            title:'Id',
+            type:'string', 
+        },
+        {
             name:'content',
             title:'Content',
             type:'array',
