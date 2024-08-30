@@ -76,13 +76,13 @@ export default async function Home() {
                 <span className="flex align-baseline border-2 border-custom-violet rounded-full p-1 m-y-3 mb-2 bg-transparent"></span>
                 <span className="bg-custom-blue w-1 flex-grow mb-4 "></span>
               </div>
-              <div  className="mb-4 w-full rounded-md p-3 justify-between relative overflow-hidden flex flex-col gap-3 transition-all duration-300 border border-blue-500 shadow-customblue">
+              <div  className="mb-4 w-full rounded-md p-3 justify-between relative overflow-hidden block md:flex flex-col gap-3 transition-all duration-300 border border-blue-500 shadow-customblue">
 
-                <div className="flex justify-between">
+                <div className="block md:flex justify-between">
                   <div><div className="text-lg font-bold text-gray-300">{item.companyName}</div>
                     <div>{item.designation}</div>
                   </div>
-                  <div className="text-sm font-normal text-gray-400 text-right">
+                  <div className="text-sm font-normal text-gray-400 text-left md:text-right">
                     <div>{item.location}</div>
                     <div>{item.period}</div>
                   </div></div>
@@ -92,9 +92,9 @@ export default async function Home() {
           })}
         </div>
       </div>
-      <div id="projects" className="mb-20">
+      <div id="projects" className="mb-10 md:mb-20">
         <p className="text-4xl text-center font-semibold mt-20 mb-10 text-gray-100">Check out my projects!</p>
-        <div className="mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
+        <div className="mt-5 grid grid-cols-1  lg:grid-cols-3 gap-4 mb-10">
           {projetcs.map((project) => (
             <Link href={`project/${project.slug}`} key={project._id} className="bg-gray-900 cursor-pointer rounded-md shadow-customblack overflow-hidden p-6 flex flex-col gap-3 transition-all duration-300   hover:scale-105 hover:border-blue-105 transition">
               {project.image && (<Image
@@ -110,14 +110,6 @@ export default async function Home() {
             </Link>
           ))}
         </div>
-      </div>
-
-
-      <p className="text-4xl mb-8 mt-8 text-center font-semibold text-gray-100">Feel free to contact !</p>
-      <div id="contact" className="flex justify-center items-center flex-wrap gap-3 mb-4">
-        <a className="mr-2" href={`mailto:${mainPage.emailId}`} target="_blank"><img height={20} width={20} src="email.png" /></a>
-        <a className="mr-2"  href={mainPage.linkedIn} target="_blank" rel="noopener noreferrer"><img height={20} width={20} src="linkedin.png" /></a>
-        <Link href={mainPage.gitLink} className="mr-2"  target="_blank" rel="noopener noreferrer"><img height={20} width={20} src="git.png" /></Link>
       </div>
     </div>
   );
