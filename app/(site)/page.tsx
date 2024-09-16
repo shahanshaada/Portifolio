@@ -15,7 +15,7 @@ export default async function Home() {
 
       <h1 className="text-6xl font-extrabold">Hello I&apos;m
         <span className="bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent"> {mainPage.name}!</span></h1>
-        <h1 className="my-2 text-3xl font-semibold text-gray-300">I am a Frontend Developer</h1>
+        <h1 className="my-2 text-3xl font-semibold text-gray-300">I am a Fullstack Developer</h1>
       <div className="text-lg text-gray-400 mt-5"><PortableText value={mainPage.description} /></div>
       <button className="bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 p-3 mt-6 rounded font-bold"><a href={mainPage.resume} target="_blank" rel="noopener noreferrer">Check Resume</a></button>
       <br /><br />
