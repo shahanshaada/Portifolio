@@ -40,12 +40,12 @@ export default async function RootLayout({
         <div className=' md:px-24 px-6'>
       <p className="text-4xl mb-8 mt-8 text-center font-semibold text-gray-100">Feel free to contact !</p>
       <div id="contact" className="flex justify-center items-center flex-wrap gap-3 mb-4">
-        <a className="mr-2" href={`mailto:${mainPage.emailId}`} target="_blank"><img height={20} width={20} src="email.png" /></a>
-        <a className="mr-2"  href={mainPage.linkedIn} target="_blank" rel="noopener noreferrer"><img height={20} width={20} src="linkedin.png" /></a>
-        <Link href={mainPage.gitLink} className="mr-2"  target="_blank" rel="noopener noreferrer"><img height={20} width={20} src="github.png" /></Link>
+        <a className="mr-2" href={`mailto:${mainPage.emailId}`} target="_blank"><img height={20} width={20} src="/email.png" /></a>
+        <a className="mr-2"  href={mainPage.linkedIn} target="_blank" rel="noopener noreferrer"><img height={20} width={20} src="/linkedin.png" /></a>
+        <Link href={mainPage.gitLink} className="mr-2"  target="_blank" rel="noopener noreferrer"><img height={20} width={20} src="/github.png" /></Link>
       </div>
       </div>
-        <div className="mt-1 mb-1 text-sm text-center text-white">© 2024 Shahan Shaada. All rights reserved.</div>
+        <div className="mt-1 mb-1 text-sm text-center text-white">© {new Date().getFullYear()} Shahan Shaada. All rights reserved.</div>
         </footer>
     </html>
   );
