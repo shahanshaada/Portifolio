@@ -4,11 +4,7 @@ import { parseBody } from 'next-sanity/webhook'
 
 export async function POST(req: NextRequest) {
   try {
-    const { body, isValidSignature } = await parseBody(req, process.env.SANITY_REVALIDATE_SECRET)
-    
-    if (!isValidSignature) {
-      return new NextResponse('Invalid signature', { status: 401 })
-    }
+    const { body } = await parseBody(req, process.env.SANITY_REVALIDATE_SECRET)
 
     if (!body?._type) {
       return new NextResponse('Bad Request', { status: 400 })
